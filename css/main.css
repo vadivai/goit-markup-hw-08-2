@@ -112,6 +112,12 @@ address {
   overflow: hidden;
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .container {
   width: 100%;
   padding: 0 15px;
@@ -253,6 +259,12 @@ address {
 }
 
 .backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -547,19 +559,11 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   margin: 0 auto;
-}
-@media screen and (min-width: 1200px) {
-  .header__container {
-    height: 80px;
-  }
 }
 
 .mob-menu__open {
   display: block;
-  position: absolute;
-  right: 15px;
   background-color: transparent;
   border: none;
   margin-left: auto;
@@ -1162,7 +1166,6 @@ address {
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
 
