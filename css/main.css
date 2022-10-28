@@ -596,7 +596,6 @@ address {
 .mob-menu__container {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
 }
 
@@ -630,17 +629,13 @@ address {
 }
 
 .mob-contacts {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .mob-menu__link:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mob-contacts__btn {
-  display: block;
-  color: var(--second-btn-color);
-  margin-top: 24px;
 }
 
 .mob-contacts__tel {
@@ -662,12 +657,14 @@ address {
 .mob-soc {
   position: relative;
   display: flex;
-  gap: 20px;
+  align-items: center;
   margin-top: 64px;
 }
 
 .mob-soc__item:not(:last-child) {
-  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mob-soc__link {
@@ -702,7 +699,11 @@ address {
     gap: 50px;
   }
 }
-.nav__list .link:hover, .nav__list .link:focus, .nav__list .link.current {
+.nav__list .link:hover, .nav__list .link:focus {
+  color: var(--accent-color);
+}
+
+.link.current {
   color: var(--accent-color);
 }
 
