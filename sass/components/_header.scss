@@ -154,16 +154,14 @@
 //   height: 1px;
 // }
 
-.mob-soc__item:not(:last-child) {
+.mob-soc__item {
   // margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.mob-soc__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
-
-// .mob-soc__item:not(:last-child) {
-//   margin-right: 20px;
-// }
 
 .mob-soc__link {
   @include font(500, 18px, 1.22, 0.02em);
