@@ -1,0 +1,69 @@
+.benefits {
+  background-color: var(--primary-color-white);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    gap: var(--typical-padding-list);
+    /* margin-right: 30px; */
+    /* padding-top: 94px;
+    padding-bottom: 94px; */
+  }
+
+  /* .benefits-item:not(:last-child), 
+    .work-item:not(:last-child),
+    .team-item:not(:last-child) {
+        margin-right: 30px;
+    } */
+
+  &__title {
+    @include font(700, 14px, 1.14, null);
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10px;
+    color: var(--text-color-primary);
+  }
+
+  &__text {
+    @include font(null, 14px, 1.71, null);
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
+
+  &__item {
+    display: block;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    // width: 270px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 4px;
+
+    background-color: var(--background-color-third);
+  }
+
+  &__icon {
+    align-items: center;
+    justify-content: center;
+    transition: fill var(--typical-transition);
+  }
+}

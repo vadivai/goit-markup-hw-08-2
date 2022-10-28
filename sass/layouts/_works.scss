@@ -1,0 +1,41 @@
+.works {
+    padding-top: 0;
+    background-color: var(--primary-color-white);
+
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
+
+    &__title {
+        @include font(700, 36px, 1.17, null);
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--typical-padding-list);
+    }
+
+    &__item {
+        position: relative;
+        width: calc((100% - 2 * 30px) / 3);
+    }
+
+    &__text {
+        @include font(700, 14px, 1.14, null);
+        text-transform: uppercase;
+        text-align: center;
+            
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 27px 0;
+        
+        color: var(--primary-color-white);
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}
+

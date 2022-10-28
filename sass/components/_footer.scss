@@ -1,0 +1,95 @@
+.footer {
+  // font-style: normal;
+  line-height: 1.71;
+  color: var(--primary-color-white);
+  background-color: var(--background-color-grey);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+      // justify-content: space-around; потом перебаить space-between или flex-startом
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__wrap {
+    margin-bottom: 60px;
+    text-align: center;
+    @include mobile {
+    }
+
+    @include tablet {
+      // margin-left: 76px;
+      // margin-right: 165px;
+      margin-right: auto;
+    }
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__contacts {
+    // font-style: normal;
+    // line-height: 1.71;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+      margin-right: 70px;
+    }
+  }
+
+  &__address-text {
+    @include mobile {
+      width: 232px;
+      margin-bottom: 8px;
+    }
+    @include tablet {
+      width: 232px;
+      margin-bottom: 8px;
+    }
+    @include desktop {
+      //       width: 231px;
+      margin-bottom: 9px;
+    }
+
+    //     margin: 0 auto;
+    //     margin-right: 70px;
+    //     margin-bottom: 9px;
+  }
+
+  &__item:not(:last-child) {
+    @include mobile {
+      margin-bottom: 8px;
+    }
+    @include desktop {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    text-align: left;
+    // line-height: 1.71;
+    // font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: var(--background-color-grey);
+    transition: color var(--typical-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      // fill: var(--accent-color);
+    }
+  }
+}

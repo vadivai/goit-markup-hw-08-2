@@ -1,0 +1,60 @@
+.clients__title {
+  @include font(700, 28px, 1.17, null);
+  text-align: center;
+  padding-bottom: 50px;
+
+  @include desktop {
+    font-size: 36px;
+  }
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--typical-padding-list);
+}
+
+.clients__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+
+  // width: 170px;
+  width: calc((100% - 30px) / 2);
+
+  @include tablet {
+    width: calc((100% - 60px) / 3);
+  }
+  @include desktop {
+    width: calc((100% - 5 * 30px) / 6);
+  }
+}
+
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fill: #afb1b8;
+  transition: border-color var(--typical-transition), fill var(--typical-transition);
+
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+    fill: var(--accent-color);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.clients__icon {
+  transition: color var(--typical-transition);
+}

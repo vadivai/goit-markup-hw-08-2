@@ -1,0 +1,50 @@
+.team {
+  background-color: var(--background-color-third);
+
+  &__title {
+    @include font(700, 28px, 1.17, null);
+    text-align: center;
+    padding-bottom: 50px;
+    color: var(--text-color-primary);
+
+    @include desktop {
+      font-size: 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--typical-padding-list);
+  }
+
+  &__item {
+    background-color: var(--primary-color-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    width: 100%;
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 3 * 30px) / 4);
+    }
+  }
+
+  &__name {
+    @include font(500, 16px, 1.19, null);
+    text-align: center;
+    padding: var(--typical-padding-list) 0 10px;
+    color: var(--text-color-primary);
+  }
+
+  &__position {
+    @include font(null, 16px, 1.19, null);
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 16px;
+  }
+}

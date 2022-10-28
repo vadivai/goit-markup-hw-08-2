@@ -1,0 +1,75 @@
+.subscription {
+  text-align: center;
+
+  @include tablet {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    margin-left: 93px;
+  }
+
+  &__title {
+    @include font(700, 14px, 1.17, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color-white);
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__wrap {
+    @include tablet {
+    }
+
+    @include desktop {
+      display: flex;
+      // flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding-left: 16px;
+
+    width: 100%;
+    margin-bottom: 20px;
+    @include mobile {
+      width: 450px;
+    }
+    @include tablet {
+    }
+    @include desktop {
+      width: 358px;
+      margin-bottom: 0;
+    }
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+    border-radius: 4px;
+    outline: transparent; /*убирает внутреннюю черную линию в поле ввода */
+
+    color: var(--primary-color-white);
+    background-color: transparent;
+    transition: border-color var(--typical-transition);
+
+    &:hover {
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__button-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color-white);
+  }
+}
